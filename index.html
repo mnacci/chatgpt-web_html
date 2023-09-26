@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en-US">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="简洁而强大的ChatGPT应用">
+    <meta name="description" content="">
     <meta name="theme-color" content="#edeff2">
     <meta name="apple-mobile-web-app-status-bar-style" content="#edeff2">
     <meta name="msapplication-TileColor" content="#edeff2">
@@ -2042,7 +2042,7 @@
                 localStorage.setItem("themeMode", themeMode);
             }
             let localTheme = localStorage.getItem("themeMode");
-            themeMode = parseInt(localTheme || "1");
+            themeMode = parseInt(localTheme || "2");
             let localAutoTheme = localStorage.getItem("autoThemeMode");
             autoThemeMode = parseInt(localAutoTheme || "1");
             let localCustomDark = localStorage.getItem("customDarkTime");
@@ -2318,8 +2318,8 @@
                 </div>
                 <div class="divider"></div>
                 <div class="links">
-                    <a href="https://github.com/xqdoo00o/chatgpt-web" target="_blank"
-                        rel="noopener noreferrer">Github</a>
+                    <a href="https://ko-fi.com/renjvip" target="_blank"
+                        rel="noopener noreferrer">♥️ Buy us coffee!</a>
                 </div>
             </div>
         </nav>
@@ -2358,9 +2358,7 @@
                             <select id="preSetModel">
                                 <option value="gpt-3.5-turbo">GPT-3.5</option>
                                 <option value="gpt-3.5-turbo-16k">GPT-3.5-16K</option>
-                                <option value="gpt-4">GPT-4</option>
-                                <option value="gpt-4-browsing" data-i18n-key="gptBrowsing"></option>
-                                <option value="gpt-4-32k">GPT-4-32k</option>
+                                <option value="gpt-4">GPT-4</option>a                                
                             </select>
                         </div>
                         <div>
@@ -3010,7 +3008,7 @@
             }
         }
         const initLang = () => {
-            let localLang = localStorage.getItem("UILang") || "zh";
+            let localLang = localStorage.getItem("UILang") || "en";
             let isInit = locale === void 0;
             if (locale !== localLang) {
                 locale = localLang;
@@ -3041,7 +3039,7 @@
                 "gptModel": "GPT model",
                 "gptBrowsing": "GPT-4-browsing",
                 "avatar": "Avatar",
-                "systemRole": "System role",
+                "systemRole": "System Role",
                 "presetRole": "Preset",
                 "default": "Default",
                 "assistant": "Assistant",
@@ -3061,11 +3059,11 @@
                 "qualityPos": "Nonsense",
                 "chatsWidth": "Chats width",
                 "typeSpeed": "Typing speed",
-                "continuousLen": "Context messages",
+                "continuousLen": "Message History",
                 "msgAbbr": " msgs.",
                 "slow": "Slow",
                 "fast": "Fast",
-                "longReply": "Long reply",
+                "longReply": "Long Reply",
                 "ttsService": "TTS API",
                 "azureTTS": "Azure",
                 "edgeTTS": "Edge",
@@ -3105,7 +3103,7 @@
                 "askTip": "Type message here",
                 "clearChat": "Clear chat",
                 "general": "General",
-                "hotkey": "Hotkey",
+                "hotkey": "Hotkeys",
                 "data": "Data",
                 "theme": "Theme",
                 "darkTheme": "Dark",
@@ -3115,9 +3113,9 @@
                 "customDarkTheme": "Custom dark theme",
                 "startDark": "Start",
                 "endDark": "End",
-                "aiEndpoint": "OpenAI endpoint",
-                "aiKey": "OpenAI API key",
-                "checkBill": "Check bill",
+                "aiEndpoint": "API Endpoint",
+                "aiKey": "API Key",
+                "checkBill": "Check Bill",
                 "used": "Used ",
                 "available": "Avail ",
                 "navKey": "Toggle nav",
@@ -3564,7 +3562,7 @@
                 };
                 let localLangIdx = 0;
                 let localDiaIdx = 0;
-                let localRecLang = localStorage.getItem("voiceRecLang") || "cmn-Hans-CN";
+                let localRecLang = localStorage.getItem("voiceRecLang") || "en-US";
                 if (localRecLang) {
                     let localIndex = langs.findIndex(item => {
                         let diaIdx = item.findIndex(lang => {return lang instanceof Array && lang[0] === localRecLang});
